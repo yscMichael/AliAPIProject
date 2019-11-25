@@ -16,8 +16,14 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    self.title = @"首页设备列表";
+}
+
+#pragma mark - 获取设备列表
+- (IBAction)getDeviceList:(UIButton *)sender {
     
 }
+
 
 
 @end

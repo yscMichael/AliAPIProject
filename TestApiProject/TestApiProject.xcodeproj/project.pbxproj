@@ -20,6 +20,8 @@
 		1161D092238B9FC500D0CFE3 /* LoginController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1161D091238B9FC500D0CFE3 /* LoginController.m */; };
 		1161D095238B9FD700D0CFE3 /* HomeListController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1161D094238B9FD700D0CFE3 /* HomeListController.m */; };
 		1161D098238B9FE700D0CFE3 /* AudioVisualPlayController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1161D097238B9FE700D0CFE3 /* AudioVisualPlayController.m */; };
+		1161D0A2238BA60700D0CFE3 /* LoginController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1161D0A1238BA60700D0CFE3 /* LoginController.xib */; };
+		11EF61FD238C03EA00A384E7 /* HomeListController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 11EF61FC238C03EA00A384E7 /* HomeListController.xib */; };
 		E1CCFFBA2FF88F7CB4AA99F8 /* libPods-TestApiProject.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 940902BE1D7EA3603B430F13 /* libPods-TestApiProject.a */; };
 /* End PBXBuildFile section */
 
@@ -68,6 +70,8 @@
 		1161D096238B9FE700D0CFE3 /* AudioVisualPlayController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AudioVisualPlayController.h; sourceTree = "<group>"; };
 		1161D097238B9FE700D0CFE3 /* AudioVisualPlayController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AudioVisualPlayController.m; sourceTree = "<group>"; };
 		1161D099238BA10A00D0CFE3 /* PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
+		1161D0A1238BA60700D0CFE3 /* LoginController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LoginController.xib; sourceTree = "<group>"; };
+		11EF61FC238C03EA00A384E7 /* HomeListController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeListController.xib; sourceTree = "<group>"; };
 		940902BE1D7EA3603B430F13 /* libPods-TestApiProject.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-TestApiProject.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A1286A9FD66AD639B2110A31 /* Pods-TestApiProject.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TestApiProject.release.xcconfig"; path = "Target Support Files/Pods-TestApiProject/Pods-TestApiProject.release.xcconfig"; sourceTree = "<group>"; };
 		AAE00D1B0AF2FEE04A80B93D /* Pods-TestApiProject.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TestApiProject.debug.xcconfig"; path = "Target Support Files/Pods-TestApiProject/Pods-TestApiProject.debug.xcconfig"; sourceTree = "<group>"; };
@@ -183,6 +187,7 @@
 			children = (
 				1161D090238B9FC500D0CFE3 /* LoginController.h */,
 				1161D091238B9FC500D0CFE3 /* LoginController.m */,
+				1161D0A1238BA60700D0CFE3 /* LoginController.xib */,
 			);
 			path = LoginController;
 			sourceTree = "<group>";
@@ -192,6 +197,7 @@
 			children = (
 				1161D093238B9FD700D0CFE3 /* HomeListController.h */,
 				1161D094238B9FD700D0CFE3 /* HomeListController.m */,
+				11EF61FC238C03EA00A384E7 /* HomeListController.xib */,
 			);
 			path = HomeListController;
 			sourceTree = "<group>";
@@ -338,8 +344,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				1161D026238B73CC00D0CFE3 /* LaunchScreen.storyboard in Resources */,
+				1161D0A2238BA60700D0CFE3 /* LoginController.xib in Resources */,
 				1161D023238B73CC00D0CFE3 /* Assets.xcassets in Resources */,
 				1161D021238B73CB00D0CFE3 /* Main.storyboard in Resources */,
+				11EF61FD238C03EA00A384E7 /* HomeListController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

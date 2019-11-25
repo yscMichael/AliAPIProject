@@ -14,14 +14,12 @@ typedef NS_ENUM (NSInteger, HTTPMethod){
 };
 
 @interface SPCNetWorkManager : AFHTTPSessionManager
-
 //单例
 + (instancetype)sharedManager;
 //发起业务网络请求
-- (void)sendRequestWithMethod:(HTTPMethod)method
-                 WithPath:(NSString *)path
-               WithParams:(NSDictionary*)params
-         WithSuccessBlock:(void(^)(NSDictionary *result))success
-          WithFailurBlock:(void(^)(NSError *error))failure;
-
+- (void)startRequestWithUrl:(NSString *)url
+                     method:(HTTPMethod) method
+                     params:(NSDictionary *)params
+           withSuccessBlock:(void(^)(NSDictionary *result))success
+            withFailurBlock:(void(^)(NSError *error))failure;
 @end

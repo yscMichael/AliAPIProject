@@ -18,9 +18,11 @@
 
 //URL
 #if DEBUG
-#define SPCBaseUrl @"http://58.251.35.131:80/api"
+#define SPCBaseUrl @"http://58.251.35.131:80"
+//#define SPCBaseUrl @"http://172.28.17.74"
 #else
-#define SPCBaseUrl @"http://58.251.35.131:80/api"
+//172.28.17.74
+#define SPCBaseUrl @"http://58.251.35.131:80"
 #endif
 
 //打印信息
