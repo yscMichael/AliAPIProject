@@ -16,7 +16,10 @@
 		1161D029238B73CC00D0CFE3 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 1161D028238B73CC00D0CFE3 /* main.m */; };
 		1161D033238B73CC00D0CFE3 /* TestApiProjectTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 1161D032238B73CC00D0CFE3 /* TestApiProjectTests.m */; };
 		1161D03E238B73CC00D0CFE3 /* TestApiProjectUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 1161D03D238B73CC00D0CFE3 /* TestApiProjectUITests.m */; };
-		1161D053238B782D00D0CFE3 /* WWNetWorkManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 1161D051238B782D00D0CFE3 /* WWNetWorkManager.m */; };
+		1161D053238B782D00D0CFE3 /* SPCNetWorkManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 1161D051238B782D00D0CFE3 /* SPCNetWorkManager.m */; };
+		1161D092238B9FC500D0CFE3 /* LoginController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1161D091238B9FC500D0CFE3 /* LoginController.m */; };
+		1161D095238B9FD700D0CFE3 /* HomeListController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1161D094238B9FD700D0CFE3 /* HomeListController.m */; };
+		1161D098238B9FE700D0CFE3 /* AudioVisualPlayController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1161D097238B9FE700D0CFE3 /* AudioVisualPlayController.m */; };
 		E1CCFFBA2FF88F7CB4AA99F8 /* libPods-TestApiProject.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 940902BE1D7EA3603B430F13 /* libPods-TestApiProject.a */; };
 /* End PBXBuildFile section */
 
@@ -56,8 +59,15 @@
 		1161D039238B73CC00D0CFE3 /* TestApiProjectUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TestApiProjectUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		1161D03D238B73CC00D0CFE3 /* TestApiProjectUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TestApiProjectUITests.m; sourceTree = "<group>"; };
 		1161D03F238B73CC00D0CFE3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		1161D051238B782D00D0CFE3 /* WWNetWorkManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WWNetWorkManager.m; sourceTree = "<group>"; };
-		1161D052238B782D00D0CFE3 /* WWNetWorkManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WWNetWorkManager.h; sourceTree = "<group>"; };
+		1161D051238B782D00D0CFE3 /* SPCNetWorkManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SPCNetWorkManager.m; sourceTree = "<group>"; };
+		1161D052238B782D00D0CFE3 /* SPCNetWorkManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SPCNetWorkManager.h; sourceTree = "<group>"; };
+		1161D090238B9FC500D0CFE3 /* LoginController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LoginController.h; sourceTree = "<group>"; };
+		1161D091238B9FC500D0CFE3 /* LoginController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LoginController.m; sourceTree = "<group>"; };
+		1161D093238B9FD700D0CFE3 /* HomeListController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HomeListController.h; sourceTree = "<group>"; };
+		1161D094238B9FD700D0CFE3 /* HomeListController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HomeListController.m; sourceTree = "<group>"; };
+		1161D096238B9FE700D0CFE3 /* AudioVisualPlayController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AudioVisualPlayController.h; sourceTree = "<group>"; };
+		1161D097238B9FE700D0CFE3 /* AudioVisualPlayController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AudioVisualPlayController.m; sourceTree = "<group>"; };
+		1161D099238BA10A00D0CFE3 /* PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
 		940902BE1D7EA3603B430F13 /* libPods-TestApiProject.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-TestApiProject.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A1286A9FD66AD639B2110A31 /* Pods-TestApiProject.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TestApiProject.release.xcconfig"; path = "Target Support Files/Pods-TestApiProject/Pods-TestApiProject.release.xcconfig"; sourceTree = "<group>"; };
 		AAE00D1B0AF2FEE04A80B93D /* Pods-TestApiProject.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TestApiProject.debug.xcconfig"; path = "Target Support Files/Pods-TestApiProject/Pods-TestApiProject.debug.xcconfig"; sourceTree = "<group>"; };
@@ -156,6 +166,7 @@
 		1161D04C238B743400D0CFE3 /* otherFiles */ = {
 			isa = PBXGroup;
 			children = (
+				1161D099238BA10A00D0CFE3 /* PrefixHeader.pch */,
 				1161D01C238B73CB00D0CFE3 /* ViewController.h */,
 				1161D01D238B73CB00D0CFE3 /* ViewController.m */,
 				1161D01F238B73CB00D0CFE3 /* Main.storyboard */,
@@ -170,6 +181,8 @@
 		1161D04D238B759600D0CFE3 /* LoginController */ = {
 			isa = PBXGroup;
 			children = (
+				1161D090238B9FC500D0CFE3 /* LoginController.h */,
+				1161D091238B9FC500D0CFE3 /* LoginController.m */,
 			);
 			path = LoginController;
 			sourceTree = "<group>";
@@ -177,6 +190,8 @@
 		1161D04E238B75B400D0CFE3 /* HomeListController */ = {
 			isa = PBXGroup;
 			children = (
+				1161D093238B9FD700D0CFE3 /* HomeListController.h */,
+				1161D094238B9FD700D0CFE3 /* HomeListController.m */,
 			);
 			path = HomeListController;
 			sourceTree = "<group>";
@@ -184,6 +199,8 @@
 		1161D04F238B760200D0CFE3 /* AudioVisualPlay */ = {
 			isa = PBXGroup;
 			children = (
+				1161D096238B9FE700D0CFE3 /* AudioVisualPlayController.h */,
+				1161D097238B9FE700D0CFE3 /* AudioVisualPlayController.m */,
 			);
 			path = AudioVisualPlay;
 			sourceTree = "<group>";
@@ -191,8 +208,8 @@
 		1161D050238B77FA00D0CFE3 /* NetworkTool */ = {
 			isa = PBXGroup;
 			children = (
-				1161D052238B782D00D0CFE3 /* WWNetWorkManager.h */,
-				1161D051238B782D00D0CFE3 /* WWNetWorkManager.m */,
+				1161D052238B782D00D0CFE3 /* SPCNetWorkManager.h */,
+				1161D051238B782D00D0CFE3 /* SPCNetWorkManager.m */,
 			);
 			path = NetworkTool;
 			sourceTree = "<group>";
@@ -406,11 +423,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1161D095238B9FD700D0CFE3 /* HomeListController.m in Sources */,
 				1161D01E238B73CB00D0CFE3 /* ViewController.m in Sources */,
 				1161D018238B73CB00D0CFE3 /* AppDelegate.m in Sources */,
 				1161D029238B73CC00D0CFE3 /* main.m in Sources */,
 				1161D01B238B73CB00D0CFE3 /* SceneDelegate.m in Sources */,
-				1161D053238B782D00D0CFE3 /* WWNetWorkManager.m in Sources */,
+				1161D053238B782D00D0CFE3 /* SPCNetWorkManager.m in Sources */,
+				1161D098238B9FE700D0CFE3 /* AudioVisualPlayController.m in Sources */,
+				1161D092238B9FC500D0CFE3 /* LoginController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -581,6 +601,8 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "$(SRCROOT)/TestApiProject/otherFiles/PrefixHeader.pch";
 				INFOPLIST_FILE = TestApiProject/otherFiles/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -598,6 +620,8 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "$(SRCROOT)/TestApiProject/otherFiles/PrefixHeader.pch";
 				INFOPLIST_FILE = TestApiProject/otherFiles/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",

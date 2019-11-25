@@ -1,5 +1,5 @@
 //
-//  WWNetWorkManager.h
+//  SPCNetWorkManager.h
 //  HYBiPad
 //
 //  Created by 杨世川 on 2018/7/6.
@@ -11,10 +11,9 @@
 typedef NS_ENUM (NSInteger, HTTPMethod){
     HTTPMethodGet,//get请求
     HTTPMethodPost,//post请求
-    HTTPMethodUpLoad//上传
 };
 
-@interface WWNetWorkManager : AFHTTPSessionManager
+@interface SPCNetWorkManager : AFHTTPSessionManager
 
 //单例
 + (instancetype)sharedManager;

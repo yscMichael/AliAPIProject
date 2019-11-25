@@ -1,5 +1,5 @@
 //
-//  AppDelegate.h
+//  AudioVisualPlayController.h
 //  TestApiProject
 //
 //  Created by yangshichuan on 2019/11/25.
@@ -8,7 +8,10 @@
 
 #import <UIKit/UIKit.h>
 
-@interface AppDelegate : UIResponder <UIApplicationDelegate>
-@property (strong, nonatomic) UIWindow *window;
+NS_ASSUME_NONNULL_BEGIN
+
+@interface AudioVisualPlayController : UIViewController
+
 @end
 
+NS_ASSUME_NONNULL_END
