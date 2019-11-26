@@ -31,7 +31,7 @@ NSString *const SPCLogin = @"/api/skyworth-northbound/users/skyworthdigitallogin
 - (IBAction)clickButton:(UIButton *)sender {
     
     NSDictionary *tempDict = @{
-        @"phone":@"19924535784"
+        @"phone":SPCPhone
     };
     [[SPCNetWorkManager sharedManager] startRequestWithUrl:SPCGetVerificationCode method:HTTPMethodPost params:tempDict withSuccessBlock:^(NSDictionary *result) {
         
@@ -44,12 +44,11 @@ NSString *const SPCLogin = @"/api/skyworth-northbound/users/skyworthdigitallogin
 - (IBAction)clickLoginButton:(UIButton *)sender {
     //登陆
     NSDictionary *tempDict = @{
+        @"username": SPCPhone,
+        @"password": self.codeTextField.text,
         @"grant_type": @"password",
         @"scope": @"all",
-        @"salt": @"",
-        @"mobile": @"19924535784",
-        @"username": @"19924535784",
-        @"password": self.codeTextField.text
+        @"type": @"account"
     };
     [[SPCNetWorkManager sharedManager] startRequestWithUrl:SPCLogin method:HTTPMethodPost params:tempDict withSuccessBlock:^(NSDictionary *result) {
         //如果codecode == 200,进入设备列表界面
