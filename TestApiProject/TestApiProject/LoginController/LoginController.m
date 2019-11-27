@@ -53,7 +53,7 @@ NSString *const SPCLogin = @"/api/skyworth-northbound/users/skyworthdigitallogin
     // 设置账号服务器环境，默认为线上环境
     [accountSDK setTaeSDKEnvironment:TaeSDKEnvironmentRelease];
     // 设置账号服务器域名；如果是线上环境，可以不设置域名；
-    [accountSDK setGwHost:@"sdk.openaccount.aliyun.com"];
+    //[accountSDK setGwHost:@"sdk.openaccount.aliyun.com"];
     // 打开调试日志
     [accountSDK setDebugLogOpen:YES];
     //初始化
@@ -103,9 +103,7 @@ NSString *const SPCLogin = @"/api/skyworth-northbound/users/skyworthdigitallogin
 
 #pragma mark - SSODelegate
 - (void)openAccountOAuthError:(NSError *)error Session:(ALBBOpenAccountSession *)session {
-    
     NSLog(@"SSODelegateSSODelegate");
-    
     if (!error) {
         //1、登录成功，发送登录成功通知，身份认证 SDK 会监听该通知进行用户身份凭证创建和管理
         NSString *loginNotificationName = [[IMSAccountService sharedService].sessionProvider accountDidLoginSuccessNotificationName];
@@ -117,9 +115,6 @@ NSString *const SPCLogin = @"/api/skyworth-northbound/users/skyworthdigitallogin
         //处理登录失败
         NSLog(@"登陆失败");
     }
-}
-- (void)openAccountBindError:(NSError *)error Session:(ALBBOpenAccountSession *)session ThirdInfo:(ALBBOpenAccountSSOLink *)link{
-    NSLog(@"openAccountBindError");
 }
 
 @end

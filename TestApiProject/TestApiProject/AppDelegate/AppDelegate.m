@@ -19,10 +19,7 @@
 
 @implementation AppDelegate
 
-
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-  
-    
     NSLog(@"launchOptionslaunchOptions = %@",launchOptions);
     self.window.backgroundColor = [UIColor whiteColor];
     [self initRootViewController];
