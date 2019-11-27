@@ -8,10 +8,9 @@
 
 #import "LoginController.h"
 #import "HomeListController.h"
-#import <ALBBOpenAccountSSO/ALBBOpenAccountSSOSDK.h>
-#import <IMSAccount/IMSAccountService.h>
-#import <IMSApiClient/IMSConfiguration.h>
 #import "SPCLoginViewModel.h"
+#import <IMSAccount/IMSAccountService.h>
+#import <ALBBOpenAccountSSO/ALBBOpenAccountSSOSDK.h>
 
 @interface LoginController ()<SSODelegate>
 //输入验证码
