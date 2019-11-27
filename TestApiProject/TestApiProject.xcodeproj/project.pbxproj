@@ -21,9 +21,11 @@
 		1161D095238B9FD700D0CFE3 /* HomeListController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1161D094238B9FD700D0CFE3 /* HomeListController.m */; };
 		1161D098238B9FE700D0CFE3 /* AudioVisualPlayController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1161D097238B9FE700D0CFE3 /* AudioVisualPlayController.m */; };
 		1161D0A2238BA60700D0CFE3 /* LoginController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1161D0A1238BA60700D0CFE3 /* LoginController.xib */; };
+		1163746C238E65AF00DD6027 /* SPCCommonInitTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 1163746B238E65AF00DD6027 /* SPCCommonInitTool.m */; };
 		118E84BB238D0D9800D45A13 /* SPCDeviceListViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 118E84BA238D0D9800D45A13 /* SPCDeviceListViewModel.m */; };
 		11CF9567238E018200D33DF2 /* yw_1222_07e8.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 11CF9566238E018200D33DF2 /* yw_1222_07e8.jpg */; };
 		11CF956A238E250100D33DF2 /* IMSOpenAccount.m in Sources */ = {isa = PBXBuildFile; fileRef = 11CF9568238E250100D33DF2 /* IMSOpenAccount.m */; };
+		11CF956F238E54F200D33DF2 /* SPCLoginViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 11CF956E238E54F200D33DF2 /* SPCLoginViewModel.m */; };
 		11EF61FD238C03EA00A384E7 /* HomeListController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 11EF61FC238C03EA00A384E7 /* HomeListController.xib */; };
 		E1CCFFBA2FF88F7CB4AA99F8 /* libPods-TestApiProject.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 940902BE1D7EA3603B430F13 /* libPods-TestApiProject.a */; };
 /* End PBXBuildFile section */
@@ -74,12 +76,16 @@
 		1161D097238B9FE700D0CFE3 /* AudioVisualPlayController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AudioVisualPlayController.m; sourceTree = "<group>"; };
 		1161D099238BA10A00D0CFE3 /* PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
 		1161D0A1238BA60700D0CFE3 /* LoginController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LoginController.xib; sourceTree = "<group>"; };
+		1163746A238E65AF00DD6027 /* SPCCommonInitTool.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SPCCommonInitTool.h; sourceTree = "<group>"; };
+		1163746B238E65AF00DD6027 /* SPCCommonInitTool.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SPCCommonInitTool.m; sourceTree = "<group>"; };
 		118E84B9238D0D9800D45A13 /* SPCDeviceListViewModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SPCDeviceListViewModel.h; sourceTree = "<group>"; };
 		118E84BA238D0D9800D45A13 /* SPCDeviceListViewModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SPCDeviceListViewModel.m; sourceTree = "<group>"; };
 		118E84BC238D0F6A00D45A13 /* IMSLifeLog.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = IMSLifeLog.h; sourceTree = "<group>"; };
 		11CF9566238E018200D33DF2 /* yw_1222_07e8.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = yw_1222_07e8.jpg; sourceTree = SOURCE_ROOT; };
 		11CF9568238E250100D33DF2 /* IMSOpenAccount.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = IMSOpenAccount.m; path = ../IMSOpenAccount.m; sourceTree = "<group>"; };
 		11CF9569238E250100D33DF2 /* IMSOpenAccount.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = IMSOpenAccount.h; path = ../IMSOpenAccount.h; sourceTree = "<group>"; };
+		11CF956D238E54F200D33DF2 /* SPCLoginViewModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SPCLoginViewModel.h; sourceTree = "<group>"; };
+		11CF956E238E54F200D33DF2 /* SPCLoginViewModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SPCLoginViewModel.m; sourceTree = "<group>"; };
 		11EF61FC238C03EA00A384E7 /* HomeListController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeListController.xib; sourceTree = "<group>"; };
 		940902BE1D7EA3603B430F13 /* libPods-TestApiProject.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-TestApiProject.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A1286A9FD66AD639B2110A31 /* Pods-TestApiProject.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TestApiProject.release.xcconfig"; path = "Target Support Files/Pods-TestApiProject/Pods-TestApiProject.release.xcconfig"; sourceTree = "<group>"; };
@@ -138,6 +144,7 @@
 			isa = PBXGroup;
 			children = (
 				11CF9566238E018200D33DF2 /* yw_1222_07e8.jpg */,
+				11637469238E657F00DD6027 /* SPCCommonInit */,
 				1161D050238B77FA00D0CFE3 /* NetworkTool */,
 				1161D04B238B742300D0CFE3 /* AppDelegate */,
 				1161D04D238B759600D0CFE3 /* LoginController */,
@@ -195,9 +202,8 @@
 		1161D04D238B759600D0CFE3 /* LoginController */ = {
 			isa = PBXGroup;
 			children = (
-				1161D090238B9FC500D0CFE3 /* LoginController.h */,
-				1161D091238B9FC500D0CFE3 /* LoginController.m */,
-				1161D0A1238BA60700D0CFE3 /* LoginController.xib */,
+				11CF956B238E54CA00D33DF2 /* Controller */,
+				11CF956C238E54D400D33DF2 /* ViewModel */,
 			);
 			path = LoginController;
 			sourceTree = "<group>";
@@ -229,6 +235,15 @@
 			path = NetworkTool;
 			sourceTree = "<group>";
 		};
+		11637469238E657F00DD6027 /* SPCCommonInit */ = {
+			isa = PBXGroup;
+			children = (
+				1163746A238E65AF00DD6027 /* SPCCommonInitTool.h */,
+				1163746B238E65AF00DD6027 /* SPCCommonInitTool.m */,
+			);
+			path = SPCCommonInit;
+			sourceTree = "<group>";
+		};
 		118E84B7238D0D5B00D45A13 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
@@ -247,6 +262,25 @@
 				11CF9568238E250100D33DF2 /* IMSOpenAccount.m */,
 				118E84B9238D0D9800D45A13 /* SPCDeviceListViewModel.h */,
 				118E84BA238D0D9800D45A13 /* SPCDeviceListViewModel.m */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		11CF956B238E54CA00D33DF2 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				1161D090238B9FC500D0CFE3 /* LoginController.h */,
+				1161D091238B9FC500D0CFE3 /* LoginController.m */,
+				1161D0A1238BA60700D0CFE3 /* LoginController.xib */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		11CF956C238E54D400D33DF2 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				11CF956D238E54F200D33DF2 /* SPCLoginViewModel.h */,
+				11CF956E238E54F200D33DF2 /* SPCLoginViewModel.m */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -466,9 +500,11 @@
 				1161D095238B9FD700D0CFE3 /* HomeListController.m in Sources */,
 				1161D01E238B73CB00D0CFE3 /* ViewController.m in Sources */,
 				1161D018238B73CB00D0CFE3 /* AppDelegate.m in Sources */,
+				1163746C238E65AF00DD6027 /* SPCCommonInitTool.m in Sources */,
 				1161D029238B73CC00D0CFE3 /* main.m in Sources */,
 				1161D01B238B73CB00D0CFE3 /* SceneDelegate.m in Sources */,
 				118E84BB238D0D9800D45A13 /* SPCDeviceListViewModel.m in Sources */,
+				11CF956F238E54F200D33DF2 /* SPCLoginViewModel.m in Sources */,
 				1161D053238B782D00D0CFE3 /* SPCNetWorkManager.m in Sources */,
 				11CF956A238E250100D33DF2 /* IMSOpenAccount.m in Sources */,
 				1161D098238B9FE700D0CFE3 /* AudioVisualPlayController.m in Sources */,

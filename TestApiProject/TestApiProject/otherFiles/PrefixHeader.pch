@@ -11,6 +11,7 @@
 
 //File
 #import "SPCNetWorkManager.h"
+#import "SPCCommonInitTool.h"
 
 //Size
 #define ScreenWidth  [UIScreen mainScreen].bounds.size.width  //屏幕宽度
@@ -27,6 +28,10 @@
 
 //电话号码
 #define SPCPhone @"19924535784"
+
+//弱引用
+#define WeakSelf __weak typeof(self) weakSelf = self;
+#define WeakObj(o) __weak typeof(o) objWeak = o;
 
 //打印信息
 #if DEBUG

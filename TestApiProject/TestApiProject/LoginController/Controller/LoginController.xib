@@ -8,7 +8,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="LoginController">
             <connections>
-                <outlet property="codeTextField" destination="l57-96-A7j" id="59c-dQ-dCg"/>
+                <outlet property="codeTextField" destination="l57-96-A7j" id="ZK8-Rc-LId"/>
                 <outlet property="view" destination="iN0-l3-epB" id="K9K-jv-GvD"/>
             </connections>
         </placeholder>
@@ -23,7 +23,7 @@
                         <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </state>
                     <connections>
-                        <action selector="clickButton:" destination="-1" eventType="touchUpInside" id="mum-gA-daS"/>
+                        <action selector="clickVerificationCodeButton:" destination="-1" eventType="touchUpInside" id="qTL-t2-YRA"/>
                     </connections>
                 </button>
                 <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="l57-96-A7j">
@@ -40,7 +40,7 @@
                         <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </state>
                     <connections>
-                        <action selector="clickLoginButton:" destination="-1" eventType="touchUpInside" id="EHs-y8-pQ8"/>
+                        <action selector="clickLoginButton:" destination="-1" eventType="touchUpInside" id="eHn-Ak-eju"/>
                     </connections>
                 </button>
             </subviews>
