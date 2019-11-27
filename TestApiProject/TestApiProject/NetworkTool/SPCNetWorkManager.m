@@ -43,15 +43,15 @@ static float SPCTimeoutInterval = 30.0;
           params:(NSDictionary *)params
 withSuccessBlock:(void(^)(NSDictionary *result))success
  withFailurBlock:(void(^)(NSError *error))failure{
-    //1、处理请求参数
-    NSString *jsonString = [self dealParamToStringWithDict:params];
-    
-    //2、网络请求request
+    //1、网络请求request
     NSString *requestURL = [NSString stringWithFormat:@"%@%@",self.baseURL,url];
     NSMutableURLRequest *request = [self dealURLRequestWithUrl:requestURL method:method];
-    //将对象设置到requestbody中<主要操作>
-    [request setHTTPBody:[jsonString dataUsingEncoding:NSUTF8StringEncoding]];
-    
+    //2、处理请求参数
+    if (params) {
+        NSString *jsonString = [self dealParamToStringWithDict:params];
+        //将对象设置到requestbody中<主要操作>
+        [request setHTTPBody:[jsonString dataUsingEncoding:NSUTF8StringEncoding]];
+    }
     //3、进行网络请求
     [[self dataTaskWithRequest:request uploadProgress:^(NSProgress * _Nonnull uploadProgress) {
 
@@ -59,6 +59,7 @@ withSuccessBlock:(void(^)(NSDictionary *result))success
         
     } completionHandler:^(NSURLResponse * _Nonnull response, id _Nullable responseObject, NSError * _Nullable error) {
         if (!error) {//网络请求成功
+            NSLog(@"response.URL = %@",response.URL);
             NSLog(@"Reply JSON: %@", responseObject);
             success(responseObject);
         } else {//网络请求失败

@@ -43,13 +43,9 @@ NSString *ServerErrorDomain = @"ServerErrorDomain";
     IMSIoTRequestBuilder *builder = [[IMSIoTRequestBuilder alloc] initWithPath:path apiVersion:version params:params];
     [builder setScheme:@"https://"];
     IMSRequest *request = [[builder setAuthenticationType:IMSAuthenticationTypeIoT] build];
-    
     IMSLifeLogVerbose(@"Request: %@", request);
-    NSLog(@"Request: %@", request);
     [IMSRequestClient asyncSendRequest:request responseHandler:^(NSError *error, IMSResponse *response) {
         IMSLifeLogVerbose(@"Request: %@\nError:%@\nResponse: %d %@", request, error, response.code, response.data);
-        NSLog(@"Request: %@\nError:%@\nResponse: %ld %@", request, error, (long)response.code, response.data);
-        
         if (error == nil && response.code != 200) {
             NSDictionary *info = @{
                                    @"message" : response.message ? : @"",

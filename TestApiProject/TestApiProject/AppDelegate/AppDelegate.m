@@ -38,11 +38,7 @@
 
 #pragma mark - 初始化框架
 - (void)initFrameworkLaunchWithOptions:(NSDictionary *)launchOptions{
-    
-    //1、API通道
-    //初始化IMSConfiguration
-    [[SPCCommonInitTool sharedManager] initIMSConfiguration];
-    
+    [[SPCCommonInitTool sharedManager] initAllSDK];
 }
 
 #pragma mark - UISceneSession lifecycle

@@ -82,8 +82,8 @@
 		118E84BA238D0D9800D45A13 /* SPCDeviceListViewModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SPCDeviceListViewModel.m; sourceTree = "<group>"; };
 		118E84BC238D0F6A00D45A13 /* IMSLifeLog.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = IMSLifeLog.h; sourceTree = "<group>"; };
 		11CF9566238E018200D33DF2 /* yw_1222_07e8.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = yw_1222_07e8.jpg; sourceTree = SOURCE_ROOT; };
-		11CF9568238E250100D33DF2 /* IMSOpenAccount.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = IMSOpenAccount.m; path = ../IMSOpenAccount.m; sourceTree = "<group>"; };
-		11CF9569238E250100D33DF2 /* IMSOpenAccount.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = IMSOpenAccount.h; path = ../IMSOpenAccount.h; sourceTree = "<group>"; };
+		11CF9568238E250100D33DF2 /* IMSOpenAccount.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IMSOpenAccount.m; sourceTree = "<group>"; };
+		11CF9569238E250100D33DF2 /* IMSOpenAccount.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IMSOpenAccount.h; sourceTree = "<group>"; };
 		11CF956D238E54F200D33DF2 /* SPCLoginViewModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SPCLoginViewModel.h; sourceTree = "<group>"; };
 		11CF956E238E54F200D33DF2 /* SPCLoginViewModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SPCLoginViewModel.m; sourceTree = "<group>"; };
 		11EF61FC238C03EA00A384E7 /* HomeListController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeListController.xib; sourceTree = "<group>"; };
@@ -238,6 +238,8 @@
 		11637469238E657F00DD6027 /* SPCCommonInit */ = {
 			isa = PBXGroup;
 			children = (
+				11CF9569238E250100D33DF2 /* IMSOpenAccount.h */,
+				11CF9568238E250100D33DF2 /* IMSOpenAccount.m */,
 				1163746A238E65AF00DD6027 /* SPCCommonInitTool.h */,
 				1163746B238E65AF00DD6027 /* SPCCommonInitTool.m */,
 			);
@@ -258,8 +260,6 @@
 			isa = PBXGroup;
 			children = (
 				118E84BC238D0F6A00D45A13 /* IMSLifeLog.h */,
-				11CF9569238E250100D33DF2 /* IMSOpenAccount.h */,
-				11CF9568238E250100D33DF2 /* IMSOpenAccount.m */,
 				118E84B9238D0D9800D45A13 /* SPCDeviceListViewModel.h */,
 				118E84BA238D0D9800D45A13 /* SPCDeviceListViewModel.m */,
 			);

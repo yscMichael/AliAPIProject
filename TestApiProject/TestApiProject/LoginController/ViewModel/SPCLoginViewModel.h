@@ -11,6 +11,9 @@
 NS_ASSUME_NONNULL_BEGIN
 
 @interface SPCLoginViewModel : NSObject
+//refresh_token
+@property(nonatomic,copy) NSString *refresh_token;
+
 //判断当前token有效期
 - (void)judgeTokenIsExpireSuccess:(void(^)(void))success failure:(void(^)(void))failure;
 //获取验证码
@@ -18,7 +21,7 @@ NS_ASSUME_NONNULL_BEGIN
 //登陆接口
 - (void)loginWithParam:(NSDictionary *)param success:(void(^)(NSString *authCode))success failure:(void(^)(NSString *error))failure;
 //登陆成功后，刷新用户token
-- (void)refrshUserTokenWithParam:(NSDictionary *)param Success:(void(^)(void))success failure:(void(^)(NSString *error))failure;
+- (void)refreshUserTokenSuccess:(void(^)(void))success failure:(void(^)(NSString *error))failure;
 @end
 
 NS_ASSUME_NONNULL_END

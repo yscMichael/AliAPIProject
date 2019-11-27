@@ -7,9 +7,13 @@
 //
 
 #import "SPCCommonInitTool.h"
+#import "IMSOpenAccount.h"
 #import <IMSLog/IMSLog.h>
+#import <IMSAccount/IMSAccountService.h>
 #import <IMSApiClient/IMSConfiguration.h>
+#import <IMSBoneKit/IMSBoneConfiguration.h>
 #import <ALBBOpenAccountSSO/ALBBOpenAccountSSOSDK.h>
+#import <IMSAuthentication/IMSAuthentication.h>
 
 @implementation SPCCommonInitTool
 #pragma mark - 单例
@@ -22,9 +26,30 @@
     return manger;
 }
 
-#pragma mark - 初始化API通道
+#pragma mark - 初始化所有
+- (void)initAllSDK{
+    [self initIMSLogSDK];
+    [self initIMSConfiguration];
+    [self initALBBOpenAccountSDK];
+    [self initAuthenticationSDK];
+    [self initBoneMobileSDK];
+}
 
-#pragma mark - API通道
+#pragma mark - 日志SDK
+- (void)initIMSLogSDK{
+    //1、日志输出
+    //统一设置所有模块的日志 tag 输出级别
+    [IMSLog setAllTagsLevel:IMSLogLevelAll];
+    [IMSLog showInConsole:YES];
+    
+    //2、设置tag
+    [IMSLog registerTag:@"IMSApiClient"];
+    [IMSLog registerTag:@"IMSAuthentication"];
+    [IMSLog registerTag:@"IMSBoneKit"];
+     [IMSLog registerTag:@"IMSMobileChannel"];
+}
+
+#pragma mark - API通道SDK
 //初始化IMSConfiguration
 - (void)initIMSConfiguration{
     //1、 对API通道SDK进行初始化、指定 API 通道服务器域名和环境
@@ -33,11 +58,6 @@
     [IMSConfiguration sharedInstance].authCode = @"07e8";
     // 设置服务端语言：zh-CN、en-US、fr-FR、de-DE、ja-JP、ko-KR、es-ES、ru-RU、hi-IN、it-IT
     [IMSConfiguration sharedInstance].language = @"zh-CN";
-    
-    //2、日志输出
-    //统一设置所有模块的日志 tag 输出级别
-    [IMSLog setAllTagsLevel:IMSLogLevelAll];
-    [IMSLog showInConsole:YES];
 }
 
 #pragma mark - 账号及用户SDK
@@ -62,6 +82,30 @@
         NSLog(@"accountSDK初始化失败");
     }];
 }
+
+#pragma mark - 身份认证SDK
+- (void)initAuthenticationSDK{
+    //1、设置IMSAccountService
+    IMSAccountService *accountService = [IMSAccountService sharedService];
+    // sessionProvider 需要开发者实现遵守IMSAccountProtocol协议的class 实例
+    // accountService.sessionProvider = (id<IMSAccountProtocol>)sessionProvider;
+    IMSOpenAccount *openAccount = [IMSOpenAccount sharedInstance];
+    accountService.sessionProvider = openAccount;
+    accountService.accountProvider = openAccount;
+    [IMSCredentialManager initWithAccountProtocol:accountService.sessionProvider];
+
+    //2、设置IMSRequestClient
+    IMSIoTAuthentication *iotAuthDelegate = [[IMSIoTAuthentication alloc] initWithCredentialManager:IMSCredentialManager.sharedManager];
+    [IMSRequestClient registerDelegate:iotAuthDelegate forAuthenticationType:IMSAuthenticationTypeIoT];
+}
+
+#pragma mark - BoneMobile容器SDK
+- (void)initBoneMobileSDK{
+    IMSBoneConfiguration *configuration = [IMSBoneConfiguration sharedInstance];
+    configuration.pluginEnvironment = IMSBonePluginEnvironmentRelease;
+}
+
+#pragma mark - 初始化长连接通道SDK
 
 
 @end

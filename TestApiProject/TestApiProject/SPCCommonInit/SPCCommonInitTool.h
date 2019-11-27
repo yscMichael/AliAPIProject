@@ -14,7 +14,13 @@ NS_ASSUME_NONNULL_BEGIN
 //单例
 + (instancetype)sharedManager;
 
-//API通道
+//初始化所有
+- (void)initAllSDK;
+
+//日志SDK
+- (void)initIMSLogSDK;
+
+//API通道SDK
 //初始化IMSConfiguration
 - (void)initIMSConfiguration;
 
@@ -22,6 +28,11 @@ NS_ASSUME_NONNULL_BEGIN
 //初始化ALBBOpenAccountSDK
 - (void)initALBBOpenAccountSDK;
 
+//身份认证SDK
+- (void)initAuthenticationSDK;
+
+//BoneMobile容器SDK
+- (void)initBoneMobileSDK;
 @end
 
 NS_ASSUME_NONNULL_END

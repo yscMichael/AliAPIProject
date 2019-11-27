@@ -24,12 +24,12 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.title = @"登陆";
-    [self initAccountFramework];
+//    [self initAccountFramework];
 }
 
 #pragma mark - 初始化账号SDK
 - (void)initAccountFramework{
-    [[SPCCommonInitTool sharedManager] initALBBOpenAccountSDK];
+//    [[SPCCommonInitTool sharedManager] initALBBOpenAccountSDK];
 }
 
 #pragma mark - 点击验证码按钮
@@ -73,10 +73,17 @@
 #pragma mark - SSODelegate
 - (void)openAccountOAuthError:(NSError *)error Session:(ALBBOpenAccountSession *)session {
     NSLog(@"SSODelegateSSODelegate");
+    WeakSelf;
     if (!error) {
         //1、登录成功，发送登录成功通知，身份认证 SDK 会监听该通知进行用户身份凭证创建和管理
         NSString *loginNotificationName = [[IMSAccountService sharedService].sessionProvider accountDidLoginSuccessNotificationName];
         [[NSNotificationCenter defaultCenter] postNotificationName:loginNotificationName object:nil];
+        //2、刷新token
+        [weakSelf.loginViewModel refreshUserTokenSuccess:^{
+            
+        } failure:^(NSString * _Nonnull error) {
+            
+        }];        
         //2、进入设备列表界面
         HomeListController *homeCtrl = [[HomeListController alloc] init];
         [self.navigationController pushViewController: homeCtrl animated:YES];
