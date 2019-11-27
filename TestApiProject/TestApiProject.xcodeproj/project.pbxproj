@@ -21,6 +21,8 @@
 		1161D095238B9FD700D0CFE3 /* HomeListController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1161D094238B9FD700D0CFE3 /* HomeListController.m */; };
 		1161D098238B9FE700D0CFE3 /* AudioVisualPlayController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1161D097238B9FE700D0CFE3 /* AudioVisualPlayController.m */; };
 		1161D0A2238BA60700D0CFE3 /* LoginController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1161D0A1238BA60700D0CFE3 /* LoginController.xib */; };
+		118E84BB238D0D9800D45A13 /* SPCDeviceListViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 118E84BA238D0D9800D45A13 /* SPCDeviceListViewModel.m */; };
+		11CF9567238E018200D33DF2 /* yw_1222_07e8.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 11CF9566238E018200D33DF2 /* yw_1222_07e8.jpg */; };
 		11EF61FD238C03EA00A384E7 /* HomeListController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 11EF61FC238C03EA00A384E7 /* HomeListController.xib */; };
 		E1CCFFBA2FF88F7CB4AA99F8 /* libPods-TestApiProject.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 940902BE1D7EA3603B430F13 /* libPods-TestApiProject.a */; };
 /* End PBXBuildFile section */
@@ -71,6 +73,10 @@
 		1161D097238B9FE700D0CFE3 /* AudioVisualPlayController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AudioVisualPlayController.m; sourceTree = "<group>"; };
 		1161D099238BA10A00D0CFE3 /* PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
 		1161D0A1238BA60700D0CFE3 /* LoginController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LoginController.xib; sourceTree = "<group>"; };
+		118E84B9238D0D9800D45A13 /* SPCDeviceListViewModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SPCDeviceListViewModel.h; sourceTree = "<group>"; };
+		118E84BA238D0D9800D45A13 /* SPCDeviceListViewModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SPCDeviceListViewModel.m; sourceTree = "<group>"; };
+		118E84BC238D0F6A00D45A13 /* IMSLifeLog.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = IMSLifeLog.h; sourceTree = "<group>"; };
+		11CF9566238E018200D33DF2 /* yw_1222_07e8.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = yw_1222_07e8.jpg; sourceTree = SOURCE_ROOT; };
 		11EF61FC238C03EA00A384E7 /* HomeListController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeListController.xib; sourceTree = "<group>"; };
 		940902BE1D7EA3603B430F13 /* libPods-TestApiProject.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-TestApiProject.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A1286A9FD66AD639B2110A31 /* Pods-TestApiProject.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TestApiProject.release.xcconfig"; path = "Target Support Files/Pods-TestApiProject/Pods-TestApiProject.release.xcconfig"; sourceTree = "<group>"; };
@@ -128,6 +134,7 @@
 		1161D015238B73CB00D0CFE3 /* TestApiProject */ = {
 			isa = PBXGroup;
 			children = (
+				11CF9566238E018200D33DF2 /* yw_1222_07e8.jpg */,
 				1161D050238B77FA00D0CFE3 /* NetworkTool */,
 				1161D04B238B742300D0CFE3 /* AppDelegate */,
 				1161D04D238B759600D0CFE3 /* LoginController */,
@@ -195,9 +202,8 @@
 		1161D04E238B75B400D0CFE3 /* HomeListController */ = {
 			isa = PBXGroup;
 			children = (
-				1161D093238B9FD700D0CFE3 /* HomeListController.h */,
-				1161D094238B9FD700D0CFE3 /* HomeListController.m */,
-				11EF61FC238C03EA00A384E7 /* HomeListController.xib */,
+				118E84B7238D0D5B00D45A13 /* Controller */,
+				118E84B8238D0D7100D45A13 /* ViewModel */,
 			);
 			path = HomeListController;
 			sourceTree = "<group>";
@@ -218,6 +224,26 @@
 				1161D051238B782D00D0CFE3 /* SPCNetWorkManager.m */,
 			);
 			path = NetworkTool;
+			sourceTree = "<group>";
+		};
+		118E84B7238D0D5B00D45A13 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				1161D093238B9FD700D0CFE3 /* HomeListController.h */,
+				1161D094238B9FD700D0CFE3 /* HomeListController.m */,
+				11EF61FC238C03EA00A384E7 /* HomeListController.xib */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		118E84B8238D0D7100D45A13 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				118E84BC238D0F6A00D45A13 /* IMSLifeLog.h */,
+				118E84B9238D0D9800D45A13 /* SPCDeviceListViewModel.h */,
+				118E84BA238D0D9800D45A13 /* SPCDeviceListViewModel.m */,
+			);
+			path = ViewModel;
 			sourceTree = "<group>";
 		};
 		701C3689BBE5A7DCEB717CD8 /* Pods */ = {
@@ -347,6 +373,7 @@
 				1161D0A2238BA60700D0CFE3 /* LoginController.xib in Resources */,
 				1161D023238B73CC00D0CFE3 /* Assets.xcassets in Resources */,
 				1161D021238B73CB00D0CFE3 /* Main.storyboard in Resources */,
+				11CF9567238E018200D33DF2 /* yw_1222_07e8.jpg in Resources */,
 				11EF61FD238C03EA00A384E7 /* HomeListController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -436,6 +463,7 @@
 				1161D018238B73CB00D0CFE3 /* AppDelegate.m in Sources */,
 				1161D029238B73CC00D0CFE3 /* main.m in Sources */,
 				1161D01B238B73CB00D0CFE3 /* SceneDelegate.m in Sources */,
+				118E84BB238D0D9800D45A13 /* SPCDeviceListViewModel.m in Sources */,
 				1161D053238B782D00D0CFE3 /* SPCNetWorkManager.m in Sources */,
 				1161D098238B9FE700D0CFE3 /* AudioVisualPlayController.m in Sources */,
 				1161D092238B9FC500D0CFE3 /* LoginController.m in Sources */,
@@ -609,6 +637,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = JF826FYE3W;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "$(SRCROOT)/TestApiProject/otherFiles/PrefixHeader.pch";
 				INFOPLIST_FILE = TestApiProject/otherFiles/Info.plist;
@@ -616,7 +645,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.chuangwei.TestApiProject;
+				PRODUCT_BUNDLE_IDENTIFIER = com.skyworthdigital.picamera;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -628,6 +657,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = JF826FYE3W;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "$(SRCROOT)/TestApiProject/otherFiles/PrefixHeader.pch";
 				INFOPLIST_FILE = TestApiProject/otherFiles/Info.plist;
@@ -635,7 +665,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.chuangwei.TestApiProject;
+				PRODUCT_BUNDLE_IDENTIFIER = com.skyworthdigital.picamera;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
