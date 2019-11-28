@@ -30,7 +30,6 @@ NSString *const SPCRefreshToken = @"/api/skyworth-northbound/users/refreshToken"
 #pragma mark - 获取验证码
 - (void)getGetVerificationCodeWithParam:(NSDictionary *)param success:(void(^)(void))success failure:(void(^)(NSString *error))failure{
     [[SPCNetWorkManager sharedManager] startRequestWithUrl:SPCGetVerificationCode method:HTTPMethodPost params:param withSuccessBlock:^(NSDictionary *result) {
-        NSLog(@"验证码 = %@",result);
         success();
     } withFailurBlock:^(NSError *error) {
         failure(@"网络请求失败");
@@ -45,6 +44,7 @@ NSString *const SPCRefreshToken = @"/api/skyworth-northbound/users/refreshToken"
             NSDictionary *data = result[@"data"];
             NSString *authCode = data[@"open_id"];
             NSLog(@"登陆接口 = %@",authCode);
+//            weakSelf.access_token = data[@"access_token"];
             weakSelf.refresh_token = data[@"refresh_token"];
             success(authCode);
         }else{
@@ -57,10 +57,13 @@ NSString *const SPCRefreshToken = @"/api/skyworth-northbound/users/refreshToken"
 
 #pragma mark - 登陆成功后，刷新用户token
 - (void)refreshUserTokenSuccess:(void(^)(void))success failure:(void(^)(NSString *error))failure{
-    NSString *resultURL = [NSString stringWithFormat:@"%@?grant_type=refresh_token&refresh_token=%@",SPCRefreshToken,self.refresh_token];
-    [[SPCNetWorkManager sharedManager] startRequestWithUrl:resultURL method:HTTPMethodPost params:nil withSuccessBlock:^(NSDictionary *result) {
+    NSDictionary *params = @{
+        @"grant_type":@"refresh_token",
+        @"refresh_token":self.refresh_token
+    };
+    [[SPCNetWorkManager sharedManager] sendRequestWithMethod:HTTPMethodPost WithPath:SPCRefreshToken WithParams:params WithSuccessBlock:^(NSDictionary *result) {
         
-    } withFailurBlock:^(NSError *error) {
+    } WithFailurBlock:^(NSError *error) {
         
     }];
 }

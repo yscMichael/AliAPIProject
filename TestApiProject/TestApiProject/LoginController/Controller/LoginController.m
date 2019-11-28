@@ -24,12 +24,6 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.title = @"登陆";
-//    [self initAccountFramework];
-}
-
-#pragma mark - 初始化账号SDK
-- (void)initAccountFramework{
-//    [[SPCCommonInitTool sharedManager] initALBBOpenAccountSDK];
 }
 
 #pragma mark - 点击验证码按钮
@@ -65,14 +59,12 @@
 
 #pragma mark - 获取open_id、进行阿里授权
 - (void)dealopenIdAndAuthCodeWithString:(NSString *)authCode{
-    NSLog(@"authCode = %@",authCode);
     id<ALBBOpenAccountSSOService> ssoService = ALBBService(ALBBOpenAccountSSOService);
     [ssoService oauthWithThirdParty:authCode delegate:self];
 }
 
 #pragma mark - SSODelegate
 - (void)openAccountOAuthError:(NSError *)error Session:(ALBBOpenAccountSession *)session {
-    NSLog(@"SSODelegateSSODelegate");
     WeakSelf;
     if (!error) {
         //1、登录成功，发送登录成功通知，身份认证 SDK 会监听该通知进行用户身份凭证创建和管理
