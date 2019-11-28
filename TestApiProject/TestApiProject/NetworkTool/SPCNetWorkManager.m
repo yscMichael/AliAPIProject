@@ -78,6 +78,36 @@ withSuccessBlock:(void(^)(NSDictionary *result))success
     }] resume];
 }
 
+
+#pragma mark - 发起网络请求(参数在param内)
+- (void)tempStartRequestWithUrl:(NSString *)url
+          method:(HTTPMethod) method
+          params:(NSDictionary *)params
+withSuccessBlock:(void(^)(NSDictionary *result))success
+ withFailurBlock:(void(^)(NSError *error))failure{
+    //1、网络请求request
+    NSString *requestURL = [NSString stringWithFormat:@"%@%@?%@=%@&%@=%@",self.baseURL,url,@"grant_type",@"refresh_token",@"refresh_token",params[@"refresh_token"]];
+    NSLog(@"requestURLrequestURL = %@",requestURL);
+    NSMutableURLRequest *request = [self tempdealURLRequestWithUrl:requestURL method:HTTPMethodPost param:nil];
+    //2、进行网络请求
+    [[self dataTaskWithRequest:request uploadProgress:^(NSProgress * _Nonnull uploadProgress) {
+
+    } downloadProgress:^(NSProgress * _Nonnull downloadProgress) {
+        
+    } completionHandler:^(NSURLResponse * _Nonnull response, id _Nullable responseObject, NSError * _Nullable error) {
+        if (!error) {//网络请求成功
+            NSLog(@"刷新token-success = %@",responseObject);
+            NSLog(@"request.URL = %@",request.URL);
+            NSLog(@"request.allHTTPHeaderFields = %@",request.allHTTPHeaderFields);
+            NSLog(@"params = %@",params);
+            success(responseObject);
+        } else {//网络请求失败
+            NSLog(@"刷新token-fail = %@",error);
+            failure(error);
+        }
+    }] resume];
+}
+
 #pragma mark - 发起网络请求(参数在param)
 - (void)sendRequestWithMethod:(HTTPMethod)method
                      WithPath:(NSString *)path
@@ -163,6 +193,31 @@ withSuccessBlock:(void(^)(NSDictionary *result))success
     [request setValue:@"application/json" forHTTPHeaderField:@"Content-Type"];
     //设置接受数据type
     [request setValue:@"application/json" forHTTPHeaderField:@"Accept"];
+    return request;
+}
+
+- (NSMutableURLRequest *)tempdealURLRequestWithUrl:(NSString *)url method:(HTTPMethod) method param:(NSDictionary *)param{
+    //1、请求方法
+    NSString *requestMethod;
+    if (method == HTTPMethodGet) {
+        requestMethod = @"GET";
+    }else if (method == HTTPMethodPost){
+        requestMethod = @"POST";
+    }else{
+        requestMethod = @"GET";
+    }
+    //2、请求request
+//    NSString *tempParam = [self dealParamToStringWithDict:param];
+    NSMutableURLRequest *request = [[AFJSONRequestSerializer serializer] requestWithMethod:requestMethod URLString:url parameters:nil error:nil];
+    //设置超时时长
+    request.timeoutInterval= SPCTimeoutInterval;
+    //设置上传数据type
+    [request setValue:@"application/json" forHTTPHeaderField:@"Content-Type"];
+    //设置接受数据type
+    [request setValue:@"application/json" forHTTPHeaderField:@"Accept"];
+    //设置请求头
+    [request setValue:self.access_token forHTTPHeaderField:@"Blade-Auth"];
+    [request setValue:@"Basic c2t5d29ydGhkaWdpdGFsOnNreXdvcnRoZGlnaXRhbF9zZWNyZXQ=" forHTTPHeaderField:@"Authorization"];
     return request;
 }
 

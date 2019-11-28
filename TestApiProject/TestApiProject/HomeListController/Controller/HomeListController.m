@@ -8,9 +8,7 @@
 
 #import "HomeListController.h"
 #import "SPCDeviceListViewModel.h"
-
-
-
+#import "SPCLinkVisualCameraPanelViewController.h"
 
 @interface HomeListController ()
 // 获取用户列表

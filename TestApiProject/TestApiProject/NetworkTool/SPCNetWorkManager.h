@@ -14,6 +14,8 @@ typedef NS_ENUM (NSInteger, HTTPMethod){
 };
 
 @interface SPCNetWorkManager : AFHTTPSessionManager
+@property(nonatomic,copy) NSString *access_token;
+
 //单例
 + (instancetype)sharedManager;
 
@@ -32,4 +34,12 @@ typedef NS_ENUM (NSInteger, HTTPMethod){
                WithParams:(NSDictionary*)params
          WithSuccessBlock:(void(^)(NSDictionary *result))success
           WithFailurBlock:(void(^)(NSError *error))failure;
+
+//
+- (void)tempStartRequestWithUrl:(NSString *)url
+          method:(HTTPMethod) method
+          params:(NSDictionary *)params
+withSuccessBlock:(void(^)(NSDictionary *result))success
+                withFailurBlock:(void(^)(NSError *error))failure;
+
 @end

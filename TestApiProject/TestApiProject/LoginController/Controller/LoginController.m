@@ -72,10 +72,10 @@
         [[NSNotificationCenter defaultCenter] postNotificationName:loginNotificationName object:nil];
         //2、刷新token
         [weakSelf.loginViewModel refreshUserTokenSuccess:^{
-            
+
         } failure:^(NSString * _Nonnull error) {
-            
-        }];        
+
+        }];
         //2、进入设备列表界面
         HomeListController *homeCtrl = [[HomeListController alloc] init];
         [self.navigationController pushViewController: homeCtrl animated:YES];

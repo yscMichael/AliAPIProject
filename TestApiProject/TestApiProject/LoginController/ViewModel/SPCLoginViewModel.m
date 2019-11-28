@@ -45,6 +45,8 @@ NSString *const SPCRefreshToken = @"/api/skyworth-northbound/users/refreshToken"
             NSString *authCode = data[@"open_id"];
             NSLog(@"登陆接口 = %@",authCode);
 //            weakSelf.access_token = data[@"access_token"];
+            //后面登陆使用
+            [SPCNetWorkManager sharedManager].access_token = data[@"access_token"];
             weakSelf.refresh_token = data[@"refresh_token"];
             success(authCode);
         }else{
@@ -61,11 +63,18 @@ NSString *const SPCRefreshToken = @"/api/skyworth-northbound/users/refreshToken"
         @"grant_type":@"refresh_token",
         @"refresh_token":self.refresh_token
     };
-    [[SPCNetWorkManager sharedManager] sendRequestWithMethod:HTTPMethodPost WithPath:SPCRefreshToken WithParams:params WithSuccessBlock:^(NSDictionary *result) {
+    
+    [[SPCNetWorkManager sharedManager] tempStartRequestWithUrl:SPCRefreshToken method:HTTPMethodPost params:params withSuccessBlock:^(NSDictionary *result) {
         
-    } WithFailurBlock:^(NSError *error) {
+    } withFailurBlock:^(NSError *error) {
         
     }];
+    
+//    [[SPCNetWorkManager sharedManager] sendRequestWithMethod:HTTPMethodPost WithPath:SPCRefreshToken WithParams:params WithSuccessBlock:^(NSDictionary *result) {
+//
+//    } WithFailurBlock:^(NSError *error) {
+//
+//    }];
 }
 
 

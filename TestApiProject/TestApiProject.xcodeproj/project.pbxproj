@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		115E5EA5238F608600754C31 /* SPCLinkVisualCameraPanelViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 115E5EA4238F608600754C31 /* SPCLinkVisualCameraPanelViewController.m */; };
+		115E5EAA238F610B00754C31 /* SPCCameraListCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 115E5EA8238F610B00754C31 /* SPCCameraListCell.m */; };
+		115E5EAB238F610B00754C31 /* SPCCameraListCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 115E5EA9238F610B00754C31 /* SPCCameraListCell.xib */; };
 		1161D018238B73CB00D0CFE3 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 1161D017238B73CB00D0CFE3 /* AppDelegate.m */; };
 		1161D01B238B73CB00D0CFE3 /* SceneDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 1161D01A238B73CB00D0CFE3 /* SceneDelegate.m */; };
 		1161D01E238B73CB00D0CFE3 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1161D01D238B73CB00D0CFE3 /* ViewController.m */; };
@@ -48,6 +51,11 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		115E5EA3238F608600754C31 /* SPCLinkVisualCameraPanelViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SPCLinkVisualCameraPanelViewController.h; sourceTree = "<group>"; };
+		115E5EA4238F608600754C31 /* SPCLinkVisualCameraPanelViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SPCLinkVisualCameraPanelViewController.m; sourceTree = "<group>"; };
+		115E5EA7238F610B00754C31 /* SPCCameraListCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SPCCameraListCell.h; sourceTree = "<group>"; };
+		115E5EA8238F610B00754C31 /* SPCCameraListCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SPCCameraListCell.m; sourceTree = "<group>"; };
+		115E5EA9238F610B00754C31 /* SPCCameraListCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SPCCameraListCell.xib; sourceTree = "<group>"; };
 		1161D013238B73CB00D0CFE3 /* TestApiProject.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TestApiProject.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1161D016238B73CB00D0CFE3 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		1161D017238B73CB00D0CFE3 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -118,6 +126,25 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		115E5EA2238F606600754C31 /* SPCLinkVisualCameraPanelViewController */ = {
+			isa = PBXGroup;
+			children = (
+				115E5EA3238F608600754C31 /* SPCLinkVisualCameraPanelViewController.h */,
+				115E5EA4238F608600754C31 /* SPCLinkVisualCameraPanelViewController.m */,
+			);
+			path = SPCLinkVisualCameraPanelViewController;
+			sourceTree = "<group>";
+		};
+		115E5EA6238F60C700754C31 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				115E5EA7238F610B00754C31 /* SPCCameraListCell.h */,
+				115E5EA8238F610B00754C31 /* SPCCameraListCell.m */,
+				115E5EA9238F610B00754C31 /* SPCCameraListCell.xib */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
 		1161D00A238B73CB00D0CFE3 = {
 			isa = PBXGroup;
 			children = (
@@ -149,6 +176,7 @@
 				1161D04B238B742300D0CFE3 /* AppDelegate */,
 				1161D04D238B759600D0CFE3 /* LoginController */,
 				1161D04E238B75B400D0CFE3 /* HomeListController */,
+				115E5EA2238F606600754C31 /* SPCLinkVisualCameraPanelViewController */,
 				1161D04F238B760200D0CFE3 /* AudioVisualPlay */,
 				1161D04C238B743400D0CFE3 /* otherFiles */,
 			);
@@ -213,6 +241,7 @@
 			children = (
 				118E84B7238D0D5B00D45A13 /* Controller */,
 				118E84B8238D0D7100D45A13 /* ViewModel */,
+				115E5EA6238F60C700754C31 /* View */,
 			);
 			path = HomeListController;
 			sourceTree = "<group>";
@@ -408,6 +437,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				115E5EAB238F610B00754C31 /* SPCCameraListCell.xib in Resources */,
 				1161D026238B73CC00D0CFE3 /* LaunchScreen.storyboard in Resources */,
 				1161D0A2238BA60700D0CFE3 /* LoginController.xib in Resources */,
 				1161D023238B73CC00D0CFE3 /* Assets.xcassets in Resources */,
@@ -506,7 +536,9 @@
 				118E84BB238D0D9800D45A13 /* SPCDeviceListViewModel.m in Sources */,
 				11CF956F238E54F200D33DF2 /* SPCLoginViewModel.m in Sources */,
 				1161D053238B782D00D0CFE3 /* SPCNetWorkManager.m in Sources */,
+				115E5EA5238F608600754C31 /* SPCLinkVisualCameraPanelViewController.m in Sources */,
 				11CF956A238E250100D33DF2 /* IMSOpenAccount.m in Sources */,
+				115E5EAA238F610B00754C31 /* SPCCameraListCell.m in Sources */,
 				1161D098238B9FE700D0CFE3 /* AudioVisualPlayController.m in Sources */,
 				1161D092238B9FC500D0CFE3 /* LoginController.m in Sources */,
 			);
