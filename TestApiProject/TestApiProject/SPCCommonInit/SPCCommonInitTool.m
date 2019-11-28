@@ -21,7 +21,7 @@
     static SPCCommonInitTool *manger = nil;
     static dispatch_once_t pred;
     dispatch_once(&pred, ^{
-        manger = [[SPCCommonInitTool alloc] init];
+        manger = [[self alloc] init];
     });
     return manger;
 }
